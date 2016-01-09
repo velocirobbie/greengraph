@@ -10,3 +10,5 @@ def test_graph_init():
         assert_equal(trial_graph.end, 'Manchester')
         mock_get.assert_called_with(domain="maps.google.co.uk")
 
+
+
