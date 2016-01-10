@@ -1,7 +1,10 @@
 - pixles: [[[0,1,0],[0,1,0]],[[0,1,0],[0,1,0]]]
   answer: [[True,True],[True,True]] 
+  count_answer: 4
 - pixles: [[[0,5,1],[1,5,1]],[[1,5,0],[0,5,5]]]
   answer: [[True,True],[True,False]]
+  count_answer: 3
 - pixles: [[[0,1,2],[2,1,0]],[[2,1,2],[2,2,2]]]
   answer: [[False,False],[False,False]]
+  count_answer: 0 
 
