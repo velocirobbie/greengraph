@@ -16,8 +16,6 @@ def process():
 
     arguments = parser.parse_args()
 
-
-
     mygraph = Greengraph(arguments.start,arguments.end)
     data = mygraph.green_between(arguments.steps)
     plt.plot(data)

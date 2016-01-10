@@ -9,11 +9,12 @@ Instalation
 
 In the root directory enter
 
-$ python install setup.py
-
-or
- 
 $ sudo python install setup.py
+
+Or, you can install directly from githup with:
+
+$ sudo pip install git+git://github.com/velocirobbie/greengraph
+
 
 Usage
 -----
