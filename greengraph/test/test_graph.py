@@ -1,5 +1,6 @@
 from greengraph.graph import Greengraph
-from mock import Mock, patch
+from greengraph.map import Map
+from mock import Mock, patch, call
 import geopy
 from nose.tools import assert_equal
 import yaml
@@ -31,9 +32,21 @@ def test_location_sequence():
             steps = fixture.pop('steps')
             expected = np.asarray(fixture.pop('answer'))
             answer = trial_graph.location_sequence(fixture.pop('start'),fixture.pop('end'),steps)
-            print expected, answer
+            # cannot assert_equal on arrays, instead loop over elements
             for step in range(steps): 
                 for coord in range(2):
                     assert_equal(expected[step,coord],answer[step,coord])
 
+@patch('greengraph.graph.Greengraph.geolocate')
+@patch('greengraph.graph.Greengraph.location_sequence')
+@patch('greengraph.map.Map.count_green')
+def test_green_between(mock_geolocate,mock_location,mock_count):
+    mock_location.return_value = [[1,0],[2,0]]
+    with patch.object(Map,'__init__') as mock_get:
+        trail_graph = Greengraph(start,end)
+        mock_get.return_value = None 
+        trail_graph.green_between(1)
+        print mock_get.mock_calls
+        mock_get.assert_has_calls([call(1, 0), call(2, 0)])
 
+       
