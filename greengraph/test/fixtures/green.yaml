@@ -1,2 +1,7 @@
-- pixles: [[[0,5,1],[1,5,1]],[[1,0,0],[0,0,1]]]
-  answer: [[True,True],[False,False]] 
+- pixles: [[[0,1,0],[0,1,0]],[[0,1,0],[0,1,0]]]
+  answer: [[True,True],[True,True]] 
+- pixles: [[[0,5,1],[1,5,1]],[[1,5,0],[0,5,5]]]
+  answer: [[True,True],[True,False]]
+- pixles: [[[0,1,2],[2,1,0]],[[2,1,2],[2,2,2]]]
+  answer: [[False,False],[False,False]]
+
