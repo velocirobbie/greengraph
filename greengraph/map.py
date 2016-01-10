@@ -3,6 +3,7 @@ from StringIO import StringIO
 from matplotlib import image as img
 import requests
 
+
 class Map(object):
     def __init__(self, lat, long, satellite=True,
             zoom=10, size=(400,400), sensor=False):

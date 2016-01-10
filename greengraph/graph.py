@@ -1,4 +1,3 @@
-#Robert Sinclair
 import numpy as np
 import geopy
 from map import Map

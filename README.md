@@ -8,17 +8,22 @@ Instalation
 -----------
 
 In the root directory enter
+
 $ python install setup.py
-or 
+
+or
+ 
 $ sudo python install setup.py
 
 Usage
 -----
 
 To display all options:
+
 $ greengraph --help
 
 A typical graph showing green space between London and Manchester would look like:
+
 $ greengraph --start London --end Manchester --steps 50 --out London_to_manchester.png
 
 (C) University College London 2010-2014
